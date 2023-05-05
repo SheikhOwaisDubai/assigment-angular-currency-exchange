@@ -1,0 +1,2 @@
+C:\Users\ovais\source\repos\assigment-angular-currency-exchange\assigment-angular-currency-exchange\obj\Debug\assigment-angular-currency-exchange.esproj.SuggestedBindingRedirects.cache
+C:\Users\ovais\source\repos\assigment-angular-currency-exchange\assigment-angular-currency-exchange\obj\Debug\assigment-angular-currency-exchange.esproj.CoreCompileInputs.cache
