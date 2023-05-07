@@ -1,10 +1,30 @@
-<h1 class="heading text-center display-2">
-  Currency Converter
-</h1>
-<hr>
+<div class="row">
+  <div class="col-sm-3">
+    <img src="https://ds.sharjah.ae/assets/images/mp-logo.svg" style="height:150px;padding:20px;" />
+  </div>
+
+
+  <div class="col-sm-8">
+
+
+    <div style="float:right;margin-top:20px;">
+      <button (click)="converter()" class="btn btn-primary convert m-2" type="submit">
+        EUR USD DETAILS
+      </button>
+
+      <button (click)="converter()" class="btn btn-primary convert m-2" type="submit">
+        EUR GBP DETAILS
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+
 <div class="container">
   <div class="main">
-  
+
     <div class="row">
       <div class="col-sm-3">
         <div class="input-group mb-3">
@@ -13,51 +33,51 @@
           </label>
           <input #c3 type="text" class="form-control searchBox" placeholder="0.00" id="oamount" (mouseleave)="changeval(c3.value)">
 
-          </div>
-        </div>
-        <div class="col-sm-4">
-
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-
-              <span class="input-group-text">From</span>
-            </div>
-            <select #c1 class="form-control from" id="sel1" (mouseleave)="changebase(c1.value)">
-              <option value="">Select One …</option>
-              <option value="USD">USD</option>
-              <option value="AED">AED</option>
-              <option value="SAR">SAR</option>
-              <option value="KWD">KWD</option>
-              <option value="INR">INR</option>
-              <option value="EUR">EUR</option>
-              <option value="PKR">PKR</option>
-              <option value="GBP">GBP</option>
-              <option value="AUD">AUD</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">To</span>
-            </div>
-            <select #c2 class="form-control to" id="sel2" (mouseleave)="tocountry(c2.value)">
-              <option value="">Select One …</option>
-              <option value="USD">USD</option>
-              <option value="AED">AED</option>
-              <option value="SAR">SAR</option>
-              <option value="KWD">KWD</option>
-              <option value="INR">INR</option>
-              <option value="EUR">EUR</option>
-              <option value="PKR">PKR</option>
-              <option value="GBP">GBP</option>
-              <option value="AUD">AUD</option>
-
-            </select>
-          </div>
         </div>
       </div>
+      <div class="col-sm-4">
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+
+            <span class="input-group-text">From</span>
+          </div>
+          <select #c1 class="form-control from" id="sel1" (mouseleave)="changebase(c1.value)">
+            <option value="">Select One …</option>
+            <option value="USD">USD</option>
+            <option value="AED">AED</option>
+            <option value="SAR">SAR</option>
+            <option value="KWD">KWD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EUR</option>
+            <option value="PKR">PKR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">To</span>
+          </div>
+          <select #c2 class="form-control to" id="sel2" (mouseleave)="tocountry(c2.value)">
+            <option value="">Select One …</option>
+            <option value="USD">USD</option>
+            <option value="AED">AED</option>
+            <option value="SAR">SAR</option>
+            <option value="KWD">KWD</option>
+            <option value="INR">INR</option>
+            <option value="EUR">EUR</option>
+            <option value="PKR">PKR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
 
     <div class="text-center">
 
@@ -69,19 +89,48 @@
 
       <div class="row">
         <div class="col-sm-3">
-          <h1>{{val1}} {{base}}</h1>  
+          <h1>{{val1}} {{base}}</h1>
         </div>
-       <h1>=</h1>
+        <h1>=</h1>
         <div class="col-sm-3">
-          <h1>{{retsult}}  {{cont2}}</h1> 
+          <h1>{{retsult}}  {{cont2}}</h1>
+        </div>
+        <div style="float:right">
+          <div class="row">
+            <div class="col-sm-5">
+              <div style="width:200px;border:1px solid #eee;padding:10px;">XX.XX USD</div>
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-primary convert m-2" type="submit">
+                More Details
+              </button>
+            </div>
+
+
+
+
+
+          </div>
+
         </div>
 
 
       </div>
-          
-        </div>
-
-      </div>
-
 
     </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+<div class="row" style="margin:10px;">
+
+    <div class="col-sm-4" style="height:200px;width:40%;background-color:#808080;margin:1px"></div>
+    <div class="col-sm-3" style="height: 200px; width: 40%; background-color: #808080; margin: 1px"></div>
+    <div class="col-sm-4" style="height: 200px; width: 40%; background-color: #808080; margin: 1px"></div>
+
+</div>
