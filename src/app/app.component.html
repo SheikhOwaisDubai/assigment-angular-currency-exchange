@@ -4,78 +4,84 @@
 <hr>
 <div class="container">
   <div class="main">
-    <div class="form-group">
-      <label for="oamount">
-        Amount to Convert :
-      </label>
-      <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
-    </div>
+  
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-3">
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">From</span>
+          <label for="oamount">
+            Amount :
+          </label>
+          <input #c3 type="text" class="form-control searchBox" placeholder="0.00" id="oamount" (mouseleave)="changeval(c3.value)">
+
           </div>
-          <select #c1 class="form-control from" id="sel1" (mouseleave)="changebase(c1.value)">
-            <option value="">Select One …</option>
-            <option value="USD">USD</option>
-            <option value="AED">AED</option>
-            <option value="SAR">SAR</option>
-            <option value="KWD">KWD</option>
-            <option value="INR">INR</option>
-            <option value="EUR">EUR</option>
-            <option value="PKR">PKR</option>
-            <option value="GBP">GBP</option>
-            <option value="AUD">AUD</option>
-          </select>
+        </div>
+        <div class="col-sm-4">
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+
+              <span class="input-group-text">From</span>
+            </div>
+            <select #c1 class="form-control from" id="sel1" (mouseleave)="changebase(c1.value)">
+              <option value="">Select One …</option>
+              <option value="USD">USD</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="KWD">KWD</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+              <option value="PKR">PKR</option>
+              <option value="GBP">GBP</option>
+              <option value="AUD">AUD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">To</span>
+            </div>
+            <select #c2 class="form-control to" id="sel2" (mouseleave)="tocountry(c2.value)">
+              <option value="">Select One …</option>
+              <option value="USD">USD</option>
+              <option value="AED">AED</option>
+              <option value="SAR">SAR</option>
+              <option value="KWD">KWD</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+              <option value="PKR">PKR</option>
+              <option value="GBP">GBP</option>
+              <option value="AUD">AUD</option>
+
+            </select>
+          </div>
         </div>
       </div>
-
-      <div class="col-sm-6">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">To</span>
-          </div>
-          <select #c2 class="form-control to" id="sel2" (mouseleave)="tocountry(c2.value)">
-            <option value="">Select One …</option>
-            <option value="USD">USD</option>
-            <option value="AED">AED</option>
-            <option value="SAR">SAR</option>
-            <option value="KWD">KWD</option>
-            <option value="INR">INR</option>
-            <option value="EUR">EUR</option>
-            <option value="PKR">PKR</option>
-            <option value="GBP">GBP</option>
-            <option value="AUD">AUD</option>
-
-          </select>
-        </div>
-      </div>
-    </div>
 
     <div class="text-center">
 
       <!-- convert button -->
-      <button  (click)="converter()" class="btn btn-primary convert m-2" type="submit">
+      <button (click)="converter()" class="btn btn-primary convert m-2" type="submit">
         Convert
       </button>
       <!-- reset button -->
-      <button class="btn btn-primary m-2" (click)="clearVal()">
-        Reset
-      </button>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <h1>{{val1}} {{base}}</h1>  
+        </div>
+       <h1>=</h1>
+        <div class="col-sm-3">
+          <h1>{{retsult}}  {{cont2}}</h1> 
+        </div>
+
+
+      </div>
+          
+        </div>
+
+      </div>
+
+
     </div>
-
-  </div>
-
-  <div id="finalAmount" class="text-center">
-
-    <!-- Display the converted amount -->
-   
-      Converted Amount :
-      
-        <p>1 {{base}}</p>
-        <p>=</p>
-        <p>{{retsult}}  {{cont2}}</p>
-   
-  </div>
-</div>

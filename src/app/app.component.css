@@ -13,12 +13,12 @@ body {
 
 hr {
   border-top: 2px solid black;
-  width: 40%;
+  width: 20%;
   margin-bottom: 55px;
 }
 
 .main {
-  width: 50vw;
+  width: 100%;
   margin: auto;
   padding: 30px;
   border-radius: 5px;
@@ -50,7 +50,7 @@ label {
 
 @media (max-width: 768px) {
   hr {
-    width: 60%;
+    width: 40%;
   }
 
   .main {
@@ -64,7 +64,7 @@ label {
   }
 
   hr {
-    width: 75%;
+    width: 40%;
   }
 
   #finalAmount h2,

@@ -10,7 +10,7 @@ export class CurrencyapiService {
 
   }
   GetCurrencyData(countvar: string) {
-    let url = 'https://api.exchangerate.host/latest' + countvar;
+    let url = 'https://api.exchangerate.host/latest?base=' + countvar;
     return this.http.get(url)
   }
 }

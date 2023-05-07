@@ -11,19 +11,27 @@ export class AppComponent {
 
   base = 'USD';
   cont2 = 'USD';
-  retsult:string='1'
+  val1: string = '1';
+  retsult:string=''
+
+
+  changeval(c: string) {
+    this.val1 = c;
+    console.log(this.val1)
+  }
+
 
 
 
   changebase(a: string) {
     this.base = a;
-  //  console.log(this.base)
+   console.log(this.base)
   }
 
 
   tocountry(b: string) {
     this.cont2 = b;
-  //  console.log(this.cont2)
+   console.log(this.cont2)
   }
 
 
@@ -33,8 +41,8 @@ export class AppComponent {
 
   }
   converter() {
-    //console.log(this.base);
-    //console.log(this.cont2);
+    console.log(this.base);
+    console.log(this.cont2);
 
     this.currency.GetCurrencyData(this.base).subscribe(data => {
 
@@ -57,43 +65,49 @@ export class AppComponent {
       //default:
       // code block
     /*}*/
-      if (this.cont2 == 'INR') {
-        this.retsult = this.currjson.rates.INR
+    
+      if (this.cont2 == 'USD') {
+        this.retsult = (Number(this.currjson.rates.USD) * Number(this.val1)).toFixed(2).toString(); 
+      }
+      if (this.cont2 == 'AED') {
+        this.retsult = (Number(this.currjson.rates.AED) * Number(this.val1)).toFixed(2).toString(); 
       }
 
-      if (this.cont2 == 'USD') {
-        this.retsult = this.currjson.rates.USD
+
+      if (this.cont2 == 'INR') {
+
+        this.retsult = (Number(this.currjson.rates.INR) * Number(this.val1)).toFixed(2).toString(); 
       }
+
+
 
       if (this.cont2 == 'PKR') {
-        this.retsult = this.currjson.rates.PKR
+        this.retsult = (Number(this.currjson.rates.PKR) * Number(this.val1)).toFixed(2).toString(); 
       }
 
-      if (this.cont2 == 'AED') {
-        this.retsult = this.currjson.rates.AED
-      }
+     
 
 
       if (this.cont2 == 'EUR') {
-        this.retsult = this.currjson.rates.EUR
+        this.retsult = (Number(this.currjson.rates.EUR) * Number(this.val1)).toFixed(2).toString(); 
       }
 
 
       if (this.cont2 == 'GBP') {
-        this.retsult = this.currjson.rates.GBP
+        this.retsult = (Number(this.currjson.rates.GBP) * Number(this.val1)).toFixed(2).toString(); 
       }
 
 
       if (this.cont2 == 'AUD') {
-        this.retsult = this.currjson.rates.AUD
+        this.retsult = (Number(this.currjson.rates.AUD) * Number(this.val1)).toFixed(2).toString(); 
       }
 
       if (this.cont2 == 'SAR') {
-        this.retsult = this.currjson.rates.SAR
+        this.retsult = (Number(this.currjson.rates.SAR) * Number(this.val1)).toFixed(2).toString(); 
       }
 
       if (this.cont2 == 'KWD') {
-        this.retsult = this.currjson.rates.KWD
+        this.retsult = (Number(this.currjson.rates.KWD) * Number(this.val1)).toFixed(2).toString(); 
       }
 
     });
