@@ -1,5 +1,5 @@
 body {
-  background-color: aliceblue;
+  background-color: #027c71;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -22,9 +22,17 @@ hr {
   margin: auto;
   padding: 30px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #027c71;
   color: white;
 }
+
+.btn-primary {
+  color: #fff;
+  background-color: #71ce57 !important;
+  border-color: #027c71 !important;
+}
+
+
 
 label {
   font-size: 20px;
