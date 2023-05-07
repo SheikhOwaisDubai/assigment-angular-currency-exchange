@@ -38,9 +38,9 @@ export class AppComponent {
 
     this.currency.GetCurrencyData(this.base).subscribe(data => {
 
-      this.currjson = JSON.parse(this.currjson);
+      this.currjson = JSON.stringify(data);
       console.log(this.currjson)
-
+      this.currjson
     });
 
   }
