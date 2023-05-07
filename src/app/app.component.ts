@@ -14,4 +14,35 @@ export class AppComponent {
   retsult:string='1'
 
 
+
+  changebase(a: string) {
+    this.base = a;
+    console.log(this.base)
+  }
+
+
+  tocountry(b: string) {
+    this.cont2 = b;
+    console.log(this.cont2)
+  }
+
+
+  constructor(private currency: CurrencyapiService) { }
+
+  clearVal() {
+
+  }
+  converter() {
+    //console.log(this.base);
+    //console.log(this.cont2);
+
+    this.currency.GetCurrencyData(this.base).subscribe(data => {
+
+      this.currjson = JSON.parse(this.currjson);
+      console.log(this.currjson)
+
+    });
+
+  }
+
 }

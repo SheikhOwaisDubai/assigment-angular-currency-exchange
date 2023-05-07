@@ -16,7 +16,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">From</span>
           </div>
-          <select class="form-control from" id="sel1">
+          <select #c1 class="form-control from" id="sel1" (mouseleave)="changebase(c1.value)">
             <option value="">Select One …</option>
             <option value="USD">USD</option>
             <option value="AED">AED</option>
@@ -79,7 +79,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">To</span>
           </div>
-          <select class="form-control to" id="sel2">
+          <select #c2 class="form-control to" id="sel2" (mouseleave)="changebase(c2.value)">
             <option value="">Select One …</option>
             <option value="USD">USD</option>
             <option value="AED">AED</option>
@@ -141,11 +141,11 @@
     <div class="text-center">
 
       <!-- convert button -->
-      <button class="btn btn-primary convert m-2" type="submit">
+      <button  (click)="converter()" class="btn btn-primary convert m-2" type="submit">
         Convert
       </button>
       <!-- reset button -->
-      <button class="btn btn-primary m-2" onclick="clearVal()">
+      <button class="btn btn-primary m-2" (click)="clearVal()">
         Reset
       </button>
     </div>

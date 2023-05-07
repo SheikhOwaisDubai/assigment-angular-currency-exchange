@@ -1,7 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CurrencyapiService } from './currencyapi.service';
+
 
 describe('AppComponent', () => {
+
+
+
   beforeEach(() => TestBed.configureTestingModule({
     declarations: [AppComponent]
   }));
@@ -9,7 +14,7 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app).toBeTruthy();    
   });
 
   it(`should have as title 'assigment-angular-currency-exchange'`, () => {
